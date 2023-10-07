@@ -64,12 +64,12 @@ function GLBViewer() {
     // Set camera position
     // camera.position.z = 2;
     
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
     scene.add(ambientLight);
   
-    // const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-    // directionalLight.position.set(1, 1, 1);
-    // scene.add(directionalLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
+    directionalLight.position.set(-1050, 0, 400);
+    scene.add(directionalLight);
     
     
     // Animation loop
@@ -104,8 +104,7 @@ function GLBViewer() {
     };
   }, []);
 
-  return <div ref={containerRef}>
-  </div>;
+  return <div ref={containerRef}></div>;
 }
 
 export default GLBViewer;
