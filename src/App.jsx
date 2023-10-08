@@ -8,6 +8,8 @@ function App() {
       <div className='container'>
 
         <GLBViewer />
+        <DisplayYear year={year} onIncrement={handleIncrement} onDecrement={handleDecrement} />
+        <RoundButton />
       </div>
     </div>
   );
